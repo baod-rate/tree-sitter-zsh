@@ -1,0 +1,8 @@
+# ignore generated code (for tools like ripgrep/fd)
+/binding.gyp
+/bindings
+/Cargo.toml
+/src/grammar.json
+/src/node-types.json
+/src/parser.c
+/src/tree_sitter
