@@ -1,7 +1,7 @@
-binding.gyp -diff linguist-generated
-bindings/** -diff linguist-generated
-Cargo.toml -diff linguist-vendored
-src/grammar.json -diff linguist-generated
-src/node-types.json -diff linguist-generated
-src/parser.c -diff linguist-generated
-src/tree_sitter/** -diff linguist-generated
+binding.gyp linguist-generated
+bindings/** linguist-generated
+Cargo.toml linguist-vendored
+src/grammar.json linguist-generated
+src/node-types.json linguist-generated
+src/parser.c linguist-generated
+src/tree_sitter/** linguist-generated
