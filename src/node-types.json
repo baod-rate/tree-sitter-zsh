@@ -1,11 +1,442 @@
 [
   {
-    "type": "source_file",
+    "type": "TERM",
     "named": true,
     "fields": {}
   },
   {
-    "type": "hello",
+    "type": "always",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "always_list",
+          "named": true
+        },
+        {
+          "type": "try_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "always_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "TERM",
+          "named": true
+        },
+        {
+          "type": "sublist",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "anonymous_func",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_def",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "io_redirect",
+          "named": true
+        },
+        {
+          "type": "list",
+          "named": true
+        },
+        {
+          "type": "simple_command",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "io_redirect",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "file_descriptor",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "TERM",
+          "named": true
+        },
+        {
+          "type": "sublist",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pipeline",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "always",
+          "named": true
+        },
+        {
+          "type": "function_def",
+          "named": true
+        },
+        {
+          "type": "list",
+          "named": true
+        },
+        {
+          "type": "simple_command",
+          "named": true
+        },
+        {
+          "type": "subshell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "precommand_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "program",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "simple_command",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "anonymous_func",
+          "named": true
+        },
+        {
+          "type": "builtin",
+          "named": true
+        },
+        {
+          "type": "io_redirect",
+          "named": true
+        },
+        {
+          "type": "precommand_modifier",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sublist",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "and_if",
+          "named": true
+        },
+        {
+          "type": "or_if",
+          "named": true
+        },
+        {
+          "type": "pipeline",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subshell",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "TERM",
+          "named": true
+        },
+        {
+          "type": "sublist",
+          "named": true
+        },
+        {
+          "type": "subshell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "try_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "TERM",
+          "named": true
+        },
+        {
+          "type": "sublist",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "\n",
+    "named": false
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": "&",
+    "named": false
+  },
+  {
+    "type": "&!",
+    "named": false
+  },
+  {
+    "type": "&|",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": "()",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "-T",
+    "named": false
+  },
+  {
+    "type": "-a",
+    "named": false
+  },
+  {
+    "type": "-p",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<&",
+    "named": false
+  },
+  {
+    "type": "<>",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">!",
+    "named": false
+  },
+  {
+    "type": ">&",
+    "named": false
+  },
+  {
+    "type": ">>",
+    "named": false
+  },
+  {
+    "type": ">|",
+    "named": false
+  },
+  {
+    "type": "always",
+    "named": false
+  },
+  {
+    "type": "and_if",
+    "named": true
+  },
+  {
+    "type": "builtin",
+    "named": false
+  },
+  {
+    "type": "builtin",
+    "named": true
+  },
+  {
+    "type": "c",
+    "named": false
+  },
+  {
+    "type": "command",
+    "named": false
+  },
+  {
+    "type": "coproc",
+    "named": false
+  },
+  {
+    "type": "exec",
+    "named": false
+  },
+  {
+    "type": "file_descriptor",
+    "named": true
+  },
+  {
+    "type": "function",
+    "named": false
+  },
+  {
+    "type": "l",
+    "named": false
+  },
+  {
+    "type": "nocorrect",
+    "named": false
+  },
+  {
+    "type": "noglob",
+    "named": false
+  },
+  {
+    "type": "or_if",
+    "named": true
+  },
+  {
+    "type": "p",
+    "named": false
+  },
+  {
+    "type": "word",
+    "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "}",
     "named": false
   }
 ]
